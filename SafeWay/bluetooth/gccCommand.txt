@@ -1,0 +1,1 @@
+gcc -o bluetooth_server bluetooth_server.c -lbluetooth
