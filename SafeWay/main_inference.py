@@ -25,14 +25,14 @@ retry_delay = 3   # 재시도 간격 (초)
 
 def reconnect_camera(cap, retry_limit=5, retry_delay=3):
     for i in range(retry_limit):
-        print(f"📷 카메라 재연결 시도 {i+1}/{retry_limit}...")
+        print(f"카메라 재연결 시도 {i+1}/{retry_limit}...")
         cap.release()
         cap.open(0)
         if cap.isOpened():
-            print("✅ 카메라 재연결 성공")
+            print("카메라 재연결 성공")
             return True
         time.sleep(retry_delay)
-    print("❌ 카메라 재연결 실패")
+    print("카메라 재연결 실패")
     return False
 
 
